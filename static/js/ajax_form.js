@@ -11,8 +11,6 @@ $(function() {
 //  *
 //  **/
 function Onload() {
-    valide_form('#last-form_cons', '.inp-vak-wrap', true);
-    valide_form('#form_calculator', '.inp-vak-wrap', true);
     valide_form('#form_cons', '.inp-vak-wrap', true);
 }
 function location_leng() {
@@ -59,7 +57,9 @@ function valide_form(id_form, error_inp_wrap, check_request) {
               phone: {
                 required: true,
               },
-             
+              footer_text: {
+                required: true,
+              },
             },
             messages: {
                 email: {
@@ -71,6 +71,9 @@ function valide_form(id_form, error_inp_wrap, check_request) {
                 },
                 phone: {
                 required: error_text.required,
+                },
+                footer_text: {
+                    required: error_text.required,
                 },
             },
             submitHandler: function(form) {

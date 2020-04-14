@@ -1,6 +1,22 @@
 $(document).ready(function(){
 
 
+
+
+  var inputHasFocus = $('.input_focus');
+inputHasFocus.on('focus', function() {
+  let focusFinder = $(this).parents('.inp-vak-wrap').find('.label__style');
+  focusFinder.addClass('label__style_active');
+});
+
+inputHasFocus.on('blur', function() {
+  if ($(this).val().length < 1 || $(this).val() == '+38(___) __ __ ___') {
+      let blurFinder =$(this).parents('.inp-vak-wrap').find('.label__style');
+      blurFinder.removeClass('label__style_active');
+  }
+  
+});
+
   let search_inp = $('.nav_search');
 
   search_inp.on('focus', function() {
@@ -31,7 +47,7 @@ $(document).ready(function(){
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    // autoplay: true,
+    autoplay: true,
     arrows: true,
     prevArrow: '<div class="header-slick-first"><</div>',
     nextArrow: '<div class="header-slick-second">></div>',
@@ -65,7 +81,7 @@ $(document).ready(function(){
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
-    // autoplay: true,
+    autoplay: true,
     arrows: true,
     prevArrow: '<div class="slick-first"><</div>',
     nextArrow: '<div class="slick-second">></div>',

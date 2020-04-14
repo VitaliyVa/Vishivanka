@@ -33,9 +33,9 @@
                  </div>
              </div>
              <div class="nav-center">
-                 <div class="nav-logo-block">
+                 <a href="#" class="nav-logo-block">
                      <img src="static/img/faina-logo.png" alt="">
-                 </div>
+                 </a>
                  
              </div>
              <div class="nav-right">
@@ -485,6 +485,107 @@
         <!-- /.container -->
     </section>
     <!-- /.contacts -->
+    <footer class="footer">
+        <img src="static/img/footer-line.svg" alt="" class="footer_line">
+        <div class="container">
+           <div class="tab_footer-wrap">
+            <div class="tab_left">
+                <div class="tab_left-wrap">
+                    <div class="footer-logo">
+                        <img src="static/img/faina-logo.png" alt="">
+                    </div>
+                    <a href="https://goo.gl/maps/vjrxg6GigowDZ4G3A" class="footer_link footer_adress">
+                        м. Тернопіль, вул. Героїв Євромайдану 2
+                    </a>
+                    <a href="tel:+38(099)9999999" class="contacts_link">
+                        +38 (099) 999 99 99
+                    </a>
+                    <a href="mailto:info@faina-vyshyvanka.com" class="contacts_link">
+                        info@faina-vyshyvanka.com
+                    </a>
+                </div>
+                <div class="soc-wrap">
+                    <div class="soc_title">
+                        Ми в соцмережах
+                    </div>
+                    <div class="sociate-block">
+                        <div class="soc-prof">
+                            <svg class="soc_svg" xmlns="http://www.w3.org/2000/svg" width="13" height="26" viewBox="0 0 13 26">
+                                <path fill="#1E1B15" d="M8.439 25.035V13.616h3.831l.575-4.451H8.439V6.323c0-1.288.356-2.166 2.206-2.166L13 4.156V.174C12.593.121 11.195 0 9.567 0 6.17 0 3.843 2.074 3.843 5.882v3.283H0v4.451h3.843v11.42h4.596z"/>
+                            </svg>
+                        </div>
+                        <div class="soc-prof">
+                            <svg class="soc_svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="#1E1B15" d="M20.484 0C22.423 0 24 1.577 24 3.516v16.968C24 22.423 22.423 24 20.484 24H3.516C1.577 24 0 22.423 0 20.484V3.516C0 1.577 1.577 0 3.516 0zm0 1.406H3.516c-1.163 0-2.11.947-2.11 2.11v16.968c0 1.163.947 2.11 2.11 2.11h16.968c1.163 0 2.11-.947 2.11-2.11V3.516c0-1.163-.947-2.11-2.11-2.11zM12 5.672c3.49 0 6.328 2.839 6.328 6.328 0 3.49-2.839 6.328-6.328 6.328-3.49 0-6.328-2.839-6.328-6.328 0-3.49 2.839-6.328 6.328-6.328zm0 1.406c-2.714 0-4.922 2.208-4.922 4.922 0 2.714 2.208 4.922 4.922 4.922 2.714 0 4.922-2.208 4.922-4.922 0-2.714-2.208-4.922-4.922-4.922zm7.031-4.219c1.163 0 2.11.947 2.11 2.11 0 1.163-.947 2.11-2.11 2.11-1.163 0-2.11-.947-2.11-2.11 0-1.163.947-2.11 2.11-2.11zm0 1.407c-.387 0-.703.315-.703.703 0 .387.316.703.703.703.388 0 .703-.316.703-.703 0-.388-.315-.703-.703-.703z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab tab_center">
+                <input type="checkbox" id="tab1" name="tab-group" class="inp_tab">
+                <label for="tab1" class="tab-title">Інформація</label> 
+                <div class="tab-content"> 
+                    <a href="#" class="footer_link">
+                        Категорії Товарів
+                    </a>
+                    <a href="#" class="footer_link">
+                        Акції
+                    </a>
+                    <a href="#" class="footer_link">
+                        Про нас
+                    </a>
+                    <a href="#" class="footer_link">
+                        Блог
+                    </a>
+                    <a href="#" class="footer_link">
+                        Доставка і оплата
+                    </a>
+                    
+                </div> 
+                <div class="block_pay">
+                    <img src="static/img/visa-mastercard-1.jpg" alt="" class="pay-img">
+                    <img src="static/img/visa-mastercard-2.jpg" alt="" class="pay-img">
+                </div>
+                <div class="block_starway">
+                    <div class="sw_text">
+                        Розробка
+                    </div>
+                    <img src="static/img/sw.svg" alt="">
+                </div>
+            </div> 
+            <div class="tab tab_right">
+                <input type="checkbox" id="tab2" name="tab-group" class="inp_tab">
+                <label for="tab2" class="tab-title">Напишіть нам</label> 
+                <div class="tab-content"> 
+                    <form method="POST" action="" class="post_forms" id="form_cons">
+                        <div class="footer_form_left">
+                            <div class="inp-vak-wrap">
+                                <label class="label__style" for="name">Ваше ім'я</label>
+                                <input class="input_focus" name="name" type="text" required="">
+                             </div>
+                             <div class="inp-vak-wrap">
+                                <label class="label__style" for="email">Email</label>
+                                <input class="input_focus" name="email" type="text" required="">
+                             </div>
+                             <div class="error_block_false"></div>
+                             <input type="submit" value='Відправити' class="submit_cons">
+                        </div>
+                        <div class="footer_form_right">
+                            <div class="inp-vak-wrap">
+                                <label class="label_area" for="footer_text">Повідомлення</label>
+                                <textarea name="footer_text" id="footer_text" cols="30" rows="10"></textarea>
+                            </div>
+                           
+                        </div>
+                     </form>
+                </div> 
+            </div> 
+           </div>
+        </div>
+        <!-- /.container -->
+    </footer>
+    <!-- /.footer -->
     </main>
     <!-- /.main-container -->
 
@@ -495,6 +596,8 @@
 
 <script type="text/javascript" src="static/js/jQuery.js"></script>
 <script type="text/javascript" src="static/js/slick.min.js"></script>
+<script type="text/javascript" src="static/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="static/js/ajax_form.js"></script>
 <script type="text/javascript" src="static/js/main.js?v=2"></script>
 
 </body>
