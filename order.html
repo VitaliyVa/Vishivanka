@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/css/nouislider.min.css">
+
+    
+    <link rel="stylesheet" href="static/css/mstepper.min.css">
+    <link rel="stylesheet" href="static/css/order.css">
     <link rel="stylesheet" href="static/css/style.css?v=3">
     
     <title>Document</title>
@@ -254,291 +258,211 @@
      </div>
     <header class="prod_header">
         <div class="container">
-            <div class="mini_navigate-block">
-                <a href="#" class="mini_nav_name">
-                    Домашня
-                </a>
-                <span class="slash">
-                    /
-                </span>
-                <a href="#" class="mini_nav_name">
-                    Усі Категорії товарів
-                </a>
-                <span class="slash">
-                    /
-                </span>
-                <a href="#" class="mini_nav_name">
-                    Дитячий одяг 
-                </a>
-                <span class="slash">
-                    /
-                </span>
-                <a href="#" class="mini_nav_name">
-                    Для немовлят
-                </a>
-            </div>
-            <h2 class="product_title">
-                Для немовлят
-            </h2>
-            <div class="product-block">
-                <div class="product_filter">
-                    <div class="filter filter_center">
-                        <input type="checkbox" id="filter3" name="filter-group" class="inp_filter">
-                        <label for="filter3" class="filter-title">
-                            <span class="filter__title">
-                            Фільтр
-                            </span> 
-                            <div class="mobale_filter">
-                                <img src="static/img/set-2.svg" alt="">
-                            </div>
-                        </label> 
-                        <div class="filter-content"> 
-                           <form action="" class="filter_form">
-                               <input type="hidden" name="first_to_cap" value="dear" class="first_to_cap">
-                               <input type="hidden" name="show_kolvo_pages" value="30" class="show_kolvo">
-                            <div class="radio_block">
-                                <input class="input_radio" name="discount" type="checkbox" id="rb-1"> 
-                                <label class="label_radio" for="rb-1">Товари зі знижкою</label>
-                             </div>
-                            <div class="filter_category">
-                                Стать
-                            </div>
-                            <div class="radio_block">
-                                <input class="input_radio" name="all" type="radio" id="rb-2"> 
-                                <label class="label_radio" for="rb-2">Усі</label>
-                             </div>
-                             <div class="radio_block">
-                                <input class="input_radio" name="boys" type="radio" id="rb-3"> 
-                                <label class="label_radio" for="rb-3">Хлопчики</label>
-                             </div>
-                             <div class="radio_block">
-                                <input class="input_radio" name="girls" type="radio" id="rb-4"> 
-                                <label class="label_radio" for="rb-4">Дівчатка</label>
-                             </div>
-                             <div class="filter_category">
-                                Тип одягу
-                            </div>
-                            <div class="radio_block">
-                                <input class="input_radio" name="shirts" type="checkbox" id="rb-5"> 
-                                <label class="label_radio" for="rb-5">Сорочки</label>
-                             </div>
-                             <div class="radio_block">
-                                <input class="input_radio" name="embroidery" type="checkbox" id="rb-6"> 
-                                <label class="label_radio" for="rb-6">Вишиванки</label>
-                             </div>
-                             <div class="radio_block">
-                                <input class="input_radio" name="skirts" type="checkbox" id="rb-7"> 
-                                <label class="label_radio" for="rb-7">Спіднички</label>
-                             </div>
-                             <div class="radio_block">
-                                <input class="input_radio" name="shareware" type="checkbox" id="rb-8"> 
-                                <label class="label_radio" for="rb-8">Шаровари</label>
-                             </div>
-                             <div class="filter_category">
-                                Ціна
-                            </div>
-                            <input type="hidden" name="min_sum" class="input_for_min_range">
-                            <input type="hidden" name="max_sum" class="input_for_max_range">
-                                <div class="cost_filter_num">
+          <div class="order_all_wrap">
+              <div class="order_form-block">
+                <div class="order_title">
+                    Оформлення замовлення
+                </div>
+                    <form action="" class="order_form">
+                      <div class="col l6 m12 s12">
+                        <div class="card">
+                          <div class="card-content">
+                            <ul class="stepper linear">
+                              <li class="step active">
+                                <div data-step-label="There's labels too!" class="step-title waves-effect waves-dark">Крок 1. Контактні дані
+                                </div>
+                                <div class="step-content first_step-content">
+                                  <div class="row">
+                                    <div class="input-field">
+                                        <label class="order_label" for="order_name">Ім'я та прізвище</label>
+                                        <input name="order_name" id="order_name" type="text" class="validate order_validate" required>
+                                        
+                                    </div>
+                                    <div class="input-field">
+                                        <label class="order_label" for="order_mobile">Номер телефону</label>
+                                        <input name="order_mobile" id="order_mobile" type="text" class="validate order_validate" required>
+                                    </div>
+                                    <div class="input-field">
+                                        <label class="order_label" for="order_email">E-mail</label>
+                                        <input name="order_email" type="email" id="order_email" class="validate order_validate" required>
+                                    </div>
+                                    <div class="input-field">
+                                        <label class="order_label" for="order_adress">Адреса</label>
+                                        <input name="order_adress" id="order_adress" type="text" class="validate order_validate" required>
+                                    </div>
                                     
+                                  </div>
+                                  <div class="step-actions">
+                                    <button class="order_btn first_order_btn waves-effect waves-dark btn blue next-step">Далі</button>
+                                  </div>
                                 </div>
-                            <div class="range_slider" id="slider"></div>
-                            <div class="filter_category">
-                                Колір
-                            </div>
-                            <div class="color_filter-block">
-                                <div class="color_filter-prof">
-                                    <input class="input_color" name="color-1" type="checkbox" id="color-1"> 
-                                    <label class="label_color main_color-1" for="color-1"></label>
+                              </li>
+                              <li class="step step_2">
+                                <div class="step-title waves-effect waves-dark">Крок 2. Спосіб доставки</div>
+                                <div class="step-content">
+                                    <div class="row">
+                                        <div class="order_tab_link-block">
+                                            <div data-tab="1" class="order_tab_link order_tab_link_active">
+                                                Нова пошта
+                                            </div>
+                                            <div data-tab="2" class="order_tab_link">
+                                                Самовивіз з магазину
+                                            </div>
+                                        </div>
+                                       <div class="order_tab_content-wrap">
+                                           <div id="tab_1" class="order_tab_content order_tab_content_active">
+                                                <div class="order_check_box">
+                                                    <div class="order_check-prof">
+                                                    <input class="order_inp_check" type="radio" value="courier" name="courier_or_pickup" id="courier" checked> 
+                                                    <label class="order_label_check order_label_check-1" for="courier">Кур'єр</label>
+                                                    </div>
+                                                    <div class="order_check-prof">
+                                                    <input class="order_inp_check" type="radio" value="pickup" name="courier_or_pickup" id="pickup"> 
+                                                    <label class="order_label_check order_label_check-2" for="pickup">Самовивіз</label>
+                                                    </div>
+                                                </div>
+                                                <div class="input-field change_input-field">
+                                                    <label class="order_label change_order_label" for="order_adress_2">Адреса</label>
+                                                    <input name="order_adress_2" id="order_adress_2" type="text" class="validate order_validate change_order_adress" required>
+                                                </div>
+                                                <div class="step-actions">
+                                                    <button class="order_btn waves-effect waves-dark btn blue next-step">Далі</button>
+                                                  </div>
+                                           </div>
+                                           <div id="tab_2" class="order_tab_content">
+                                                <div class="text_order">
+                                                    Забрати замовлення можна за адресою магазину, площа Героїв Євромайдану 4
+                                                </div>
+                                                <div class="step-actions">
+                                                    <button class="order_btn order_btn_active order_btn_active_fixed waves-effect waves-dark btn blue next-step">Замовити</button>
+                                                  </div>
+                                            </div>
+                                           
+                                       </div>
+                                        
+                                      </div>
+                                 
                                 </div>
-                                <div class="color_filter-prof">
-                                    <input class="input_color" name="color-2" type="checkbox" id="color-2"> 
-                                    <label class="label_color main_color-2" for="color-2"></label>
+                              </li>
+                              <li class="step">
+                                <div class="step-title waves-effect waves-dark">Крок 3. Оплата</div>
+                                <div class="step-content">
+                                    <div class="order_check_box">
+                                        <div class="order_check-prof">
+                                        <input class="order_inp_check" type="radio" value="cash" name="payment_method" id="cash" checked> 
+                                        <label class="order_label_check order_label_check-1" for="cash">Готівка</label>
+                                        </div>
+                                        <div class="order_check-prof">
+                                        <input class="order_inp_check" type="radio" value="cash_on_delivery" name="payment_method" id="cash_on_delivery"> 
+                                        <label class="order_label_check order_label_check-2" for="cash_on_delivery">Накладений платіж</label>
+                                        </div>
+                                        <div class="order_check-prof">
+                                            <input class="order_inp_check" type="radio" value="card" name="payment_method" id="card"> 
+                                            <label class="order_label_check order_label_check-2" for="card">Карткою</label>
+                                        </div>
+                                    </div>
+                                  <div class="step-actions">
+                                    <button class="waves-effect waves-dark btn blue order_btn_active" type="submit">Замовити</button>
+                                  </div>
                                 </div>
-                                <div class="color_filter-prof">
-                                    <input class="input_color" name="color-3" type="checkbox" id="color-3"> 
-                                    <label class="label_color main_color-3" for="color-3"></label>
-                                </div>
-                                <div class="color_filter-prof">
-                                    <input class="input_color" name="color-4" type="checkbox" id="color-4"> 
-                                    <label class="label_color main_color-4" for="color-4"></label>
-                                </div>
-                                <div class="color_filter-prof">
-                                    <input class="input_color" name="color-5" type="checkbox" id="color-5"> 
-                                    <label class="label_color main_color-5" for="color-5"></label>
-                                </div>
-                                <div class="color_filter-prof">
-                                    <input class="input_color" name="color-6" type="checkbox" id="color-6"> 
-                                    <label class="label_color main_color-6" for="color-6"></label>
-                                </div>
-                                <div class="color_filter-prof">
-                                    <input class="input_color" name="color-7" type="checkbox" id="color-7"> 
-                                    <label class="label_color main_color-7" for="color-7"></label>
-                                </div>
-                                <div class="color_filter-prof">
-                                    <input class="input_color" name="color-8" type="checkbox" id="color-8"> 
-                                    <label class="label_color main_color-8" for="color-8"></label>
-                                </div>
-                            </div>
-                            <div class="filter_category">
-                                Розмір
-                            </div>
-                            <div class="filter_for_size">
-                                    <div class="radio_block">
-                                        <input class="input_radio" name="XS" type="checkbox" id="rb-10"> 
-                                        <label class="label_radio" for="rb-10">XS</label>
-                                     </div>
-                                     <div class="radio_block">
-                                        <input class="input_radio" name="S" type="checkbox" id="rb-11"> 
-                                        <label class="label_radio" for="rb-11">S</label>
-                                     </div>
-                                     <div class="radio_block">
-                                        <input class="input_radio" name="M" type="checkbox" id="rb-12"> 
-                                        <label class="label_radio" for="rb-12">M</label>
-                                     </div>
-                                     <div class="radio_block">
-                                        <input class="input_radio" name="L" type="checkbox" id="rb-13"> 
-                                        <label class="label_radio" for="rb-13">L</label>
-                                     </div>
-                                     <div class="radio_block">
-                                        <input class="input_radio" name="XL" type="checkbox" id="rb-14"> 
-                                        <label class="label_radio" for="rb-14">XL</label>
-                                     </div>
-                            </div>
-                           </form>
-                        </div> 
-                    </div> 
-                </div>
-                <div class="product_content">
-                    <div class="settings_prod">
-                        <div class="cost_filter-block">
-                            <div data-cost="dear" class="cost_filter_link cost_filter_link_active">
-                                Спочатку найдорожчі
-                            </div>
-                            <div data-cost="cheap" class="cost_filter_link">
-                                Спочатку найдешевші
-                            </div>
+                              </li>
+                            </ul>
+                          </div>
                         </div>
-                        <div class="show_filter-block">
-                            <div class="show_title">
-                                Показувати товарів:
+                      </div>
+                    </form>
+                             
+              </div>
+              <div class="order_card-block">
+                   <div class="order_content_card-wrap">
+                    <div class="card_info-prof">
+                        <img src="static/img/card-2.jpg" alt="" class="char_card-img">
+                        <div class="char_data">
+                            <div class="char_top">
+                                <span class="char_web char_name">
+                                    Сукня Фіалка,
+                                </span>
+                                <span class="char_web char_2">
+                                    Синій колір,
+                                </span>
+                                <span class="char_web char_3">
+                                    S
+                                </span>
                             </div>
-                           <div class="filter_link-wrap">
-                                <div data-show="30" class="show_filter_link show_filter_link_active">
-                                    30
-                                </div>
-                                <div data-show="60" class="show_filter_link">
-                                    60
-                                </div>
-                                <div data-show="90" class="show_filter_link">
-                                    90
-                                </div>
-                           </div>
-                        </div>
-                    </div>
-                    <div class="main_product-block">
-                        <div class="product_card-prof">
-                            <a href="#" class="prod_card_link">
-                                <img src="static/img/best-1.jpg" alt="" class="prod_card-img">
-                            </a>
-                            <div class="prod_card-name">
-                                Костюм
-                            </div>
-                            <div class="prod_card-info">
-                                <div class="prod_card-cost">
-                                    1022 грн.
-                                </div>
-                                <a href="#" class="prod_card-btn">
-                                    У Кошик
-                                </a>
-                            </div>
-                        </div>
-                        <div class="product_card-prof">
-                            <a href="#" class="prod_card_link">
-                                <img src="static/img/best-2.jpg" alt="" class="prod_card-img">
-                            </a>
-                            <div class="prod_card-name">
-                                Костюм
-                            </div>
-                            <div class="prod_card-info">
-                                <div class="prod_card-cost">
-                                    1022 грн.
-                                </div>
-                                <a href="#" class="prod_card-btn">
-                                    У Кошик
-                                </a>
-                            </div>
-                        </div>
-                        <div class="product_card-prof">
-                            <a href="#" class="prod_card_link">
-                                <img src="static/img/best-3.jpg" alt="" class="prod_card-img">
-                            </a>
-                            <div class="prod_card-name">
-                                Костюм
-                            </div>
-                            <div class="prod_card-info">
-                                <div class="prod_card-cost">
-                                    1022 грн.
-                                </div>
-                                <a href="#" class="prod_card-btn">
-                                    У Кошик
-                                </a>
-                            </div>
-                        </div>
-                        <div class="product_card-prof">
-                            <a href="#" class="prod_card_link">
-                                <img src="static/img/best-1.jpg" alt="" class="prod_card-img">
-                            </a>
-                            <div class="prod_card-name">
-                                Костюм
-                            </div>
-                            <div class="prod_card-info">
-                                <div class="prod_card-cost">
-                                    1022 грн.
-                                </div>
-                                <a href="#" class="prod_card-btn">
-                                    У Кошик
-                                </a>
-                            </div>
-                        </div>
-                        <div class="product_card-prof">
-                            <a href="#" class="prod_card_link">
-                                <img src="static/img/best-2.jpg" alt="" class="prod_card-img">
-                            </a>
-                            <div class="prod_card-name">
-                                Костюм
-                            </div>
-                            <div class="prod_card-info">
-                                <div class="prod_card-cost">
-                                    1022 грн.
-                                </div>
-                                <a href="#" class="prod_card-btn">
-                                    У Кошик
-                                </a>
-                            </div>
-                        </div>
-                        <div class="product_card-prof">
-                            <a href="#" class="prod_card_link">
-                                <img src="static/img/best-3.jpg" alt="" class="prod_card-img">
-                            </a>
-                            <div class="prod_card-name">
-                                Костюм
-                            </div>
-                            <div class="prod_card-info">
-                                <div class="prod_card-cost">
-                                    1022 грн.
-                                </div>
-                                <a href="#" class="prod_card-btn">
-                                    У Кошик
-                                </a>
+                            <div class="char_one_cost">
+                                ₴ 1223	
                             </div>
                         </div>
                     </div>
-                    <div class="prod_card_more">
-                        Більше товарів
+                    <div class="card_info-prof">
+                        <img src="static/img/card-2.jpg" alt="" class="char_card-img">
+                        <div class="char_data">
+                            <div class="char_top">
+                                <span class="char_web char_name">
+                                    Сукня Фіалка,
+                                </span>
+                                <span class="char_web char_2">
+                                    Синій колір,
+                                </span>
+                                <span class="char_web char_3">
+                                    S
+                                </span>
+                            </div>
+                            <div class="char_one_cost">
+                                ₴ 1223	
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_info-prof">
+                        <img src="static/img/card-2.jpg" alt="" class="char_card-img">
+                        <div class="char_data">
+                            <div class="char_top">
+                                <span class="char_web char_name">
+                                    Сукня Фіалка,
+                                </span>
+                                <span class="char_web char_2">
+                                    Синій колір,
+                                </span>
+                                <span class="char_web char_3">
+                                    S
+                                </span>
+                            </div>
+                            <div class="char_one_cost">
+                                ₴ 1223	
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_info-prof">
+                        <img src="static/img/card-2.jpg" alt="" class="char_card-img">
+                        <div class="char_data">
+                            <div class="char_top">
+                                <span class="char_web char_name">
+                                    Сукня Фіалка,
+                                </span>
+                                <span class="char_web char_2">
+                                    Синій колір,
+                                </span>
+                                <span class="char_web char_3">
+                                    S
+                                </span>
+                            </div>
+                            <div class="char_one_cost">
+                                ₴ 1223	
+                            </div>
+                        </div>
+                    </div>
+                   </div>
+                    
+                <div class="result_bottom">
+                    <div class="result_sum_info">
+                        Всього
+                    </div>
+                    <div class="result_sum_order">
+                        1223 грн
                     </div>
                 </div>
-            </div>
+              </div>
+          </div>
         </div>
         <!-- /.container -->
     </header>
@@ -655,6 +579,11 @@
 
 
 <script type="text/javascript" src="static/js/jQuery.js"></script>
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script> -->
+<script type="text/javascript" src="static/js/mstepper.js"></script>
+
 <script type="text/javascript" src="static/js/nouislider.min.js"></script>
 <script type="text/javascript" src="static/js/jquery.validate.min.js"></script>
 <script type="text/javascript" src="static/js/ajax_form.js"></script>

@@ -1,5 +1,128 @@
 $(document).ready(function(){
   var currentPage = 0;
+  var super_kostile = false;
+
+
+
+ 
+    $('.order_validate').on('focus', function() {
+      if (super_kostile == true) {
+        func_for_indefined_input('.first_step-content', '.order_validate', '.order_label', '.input-field');
+      }
+    });
+    $('.order_validate').on('blur', function() {
+      if (super_kostile == true) {
+        func_for_indefined_input('.first_step-content', '.order_validate', '.order_label', '.input-field');
+      }
+    });
+    document.addEventListener('keydown', function(event) {
+      
+      if (super_kostile == true) {
+        func_for_indefined_input('.first_step-content', '.order_validate', '.order_label', '.input-field');
+      }
+    });
+
+  
+$('.first_order_btn').on('click', function() {
+  super_kostile = true;
+  func_for_indefined_input('.first_step-content', '.order_validate', '.order_label', '.input-field');
+
+// var finder_error = $('.error').parents('.input-field').find('order_label');
+  // console.log('finder_error: ', finder_error);
+  // finder_error.addClass('123');
+});
+
+function func_for_indefined_input (input_content_block, main_inputs, main_label, input_parents) {
+  var finder_undefind_inp = $(input_content_block + ' ' + main_inputs);
+  for (let i = 0; i < finder_undefind_inp.length; i++) {
+    
+    let curr_input = finder_undefind_inp[i];
+    var check_val = $(curr_input).val();
+
+    if (check_val == "") {
+      var finder_error = $(curr_input).parents(input_parents).find(main_label);
+      finder_error.addClass('error_label');
+      $(curr_input).addClass('error_input');
+    } else if (check_val !== "") {
+      var finder_error = $(curr_input).parents(input_parents).find(main_label);
+      finder_error.removeClass('error_label');
+      $(curr_input).removeClass('error_input');
+    }
+  }
+}
+
+
+
+
+
+
+
+
+$('.order_btn_active_fixed').on('click', function() {
+  $('.step_2').removeClass('wrong');
+});
+
+  $(".order_tab_link").on("click", function(){
+  // ($(this)[0].dataset.tab);
+  var className = $(this).data('tab');
+  console.log('className: ', className);
+
+    if (className == 2) {
+      $(".change_order_adress").remove();
+    } else {
+      $(".change_order_adress").remove();
+
+      var input_order = document.createElement('input');
+      input_order.classList.add('validate', 'order_validate', 'change_order_adress');
+      input_order.setAttribute(`name`, "order_adress_2");
+      input_order.setAttribute(`id`, "order_adress_2");
+      input_order.setAttribute(`type`, "text");
+      input_order.setAttribute('required', 'required');
+      $('.change_input-field')[0].appendChild(input_order);
+
+
+
+var orderInputHasFocus = $('.order_validate');
+orderInputHasFocus.on('focus', function() {
+  let focusFinder = $(this).parents('.input-field').find('.order_label');
+  focusFinder.addClass('order_label_active');
+  
+});
+
+orderInputHasFocus.on('blur', function() {
+  if ($(this).val().length < 1 || $(this).val() == '+38(___) __ __ ___') {
+      let blurFinder =$(this).parents('.input-field').find('.order_label');
+      blurFinder.removeClass('order_label_active');
+  }
+  
+});
+    }
+  
+
+    ($(".order_tab_link").removeClass("order_tab_link_active"));
+     ($(this).addClass("order_tab_link_active"));
+    ($(".order_tab_content").removeClass("order_tab_content_active"));
+    
+    var content_tab = $("#tab_" + className);
+    content_tab.addClass("order_tab_content_active");
+  });
+   
+
+$('.order_label_check-1').on('click', function() {
+  $('.change_order_label').text('Адреса');
+  $('.change_order_adress').attr('type', 'text');
+  $('.change_order_adress').val('');
+
+});
+
+$('.order_label_check-2').on('click', function() {
+  $('.change_order_label').text('Номер відділення');
+  $('.change_order_adress').attr('type', 'number');
+  $('.change_order_adress').val('');
+
+});
+
+
 
 
 
@@ -180,6 +303,19 @@ function createProdCard (product, step) {
 
 
 
+var orderInputHasFocus = $('.order_validate');
+orderInputHasFocus.on('focus', function() {
+  let focusFinder = $(this).parents('.input-field').find('.order_label');
+  focusFinder.addClass('order_label_active');
+});
+
+orderInputHasFocus.on('blur', function() {
+  if ($(this).val().length < 1 || $(this).val() == '+38(___) __ __ ___') {
+      let blurFinder =$(this).parents('.input-field').find('.order_label');
+      blurFinder.removeClass('order_label_active');
+  }
+  
+});
 
 
 
@@ -321,6 +457,9 @@ $('.ham').on('click', function() {
 
     $('.main-nav').toggleClass('main-nav_active');
 });
+
+
+// ========================================================>
 
 
 

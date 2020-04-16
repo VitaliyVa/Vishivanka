@@ -12,6 +12,7 @@ $(function() {
 //  **/
 function Onload() {
     valide_form('#form_cons', '.inp-vak-wrap', true);
+    valide_form('.order_form', '.input-field', true);
 }
 function location_leng() {
     return location.pathname.split('/')[1];
@@ -51,7 +52,23 @@ function valide_form(id_form, error_inp_wrap, check_request) {
                 required: true,
                 email: true,
               },
+              order_email: {
+                required: true,
+                email: true,
+              },
               name: {
+                required: true,
+              },
+              order_name: {
+                required: true,
+              },
+              order_mobile: {
+                required: true,
+              },
+              order_adress: {
+                required: true,
+              },
+              order_adress_2: {
                 required: true,
               },
               phone: {
@@ -66,8 +83,24 @@ function valide_form(id_form, error_inp_wrap, check_request) {
                 required: error_text.required,
                 email: error_text.email
                 },
+                order_email: {
+                    required: error_text.required,
+                    email: error_text.email
+                    },
                 name: {
                 required: error_text.required,
+                },
+                order_name: {
+                    required: error_text.required,
+                },
+                order_mobile: {
+                    required: error_text.required,
+                },
+                order_adress: {
+                    required: error_text.required,
+                },
+                order_adress_2: {
+                    required: error_text.required,
                 },
                 phone: {
                 required: error_text.required,
