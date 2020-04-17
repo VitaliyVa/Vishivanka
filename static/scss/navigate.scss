@@ -40,6 +40,7 @@
 
         &:hover {
             color: #da251d;
+            
         }
         &_active {
             color: #da251d;
@@ -72,6 +73,9 @@
         &:hover {
             color: #da251d;
 
+            .link_category {
+                color: #da251d;
+            }
         }
     }
     &_link:nth-child(1) {

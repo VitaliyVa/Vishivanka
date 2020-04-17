@@ -4,6 +4,22 @@ $(document).ready(function(){
 
 
 
+
+
+  console.log();
+
+  var anActive_inp = $('.radio_block.ANactive').find('.input_radio');
+  var anActive_label = $('.radio_block.ANactive').find('.label_radio');
+
+  anActive_inp.remove();
+  
+  // $(anActive_label)[0].innerHTML = `<label class="label_radios" for="rb-10"><s>${anActive_label.text()}</s></label>`;
+
+  
+
+
+
+
  
     $('.order_validate').on('focus', function() {
       if (super_kostile == true) {
@@ -361,9 +377,29 @@ inputHasFocus.on('blur', function() {
   })
 
 
+  var slickFinder0 = $('.slider_card-wrap').length;
+  if (slickFinder0 >= 1) {
+    $('.main_card_slider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      asNavFor: '.mini_slider'
+    });
 
-var slickFinder = $('.header_home').length;
-if (slickFinder >= 1) {
+    $('.mini_slider').slick({
+      infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    vertical: true,
+    verticalSwiping: true,
+    focusOnSelect: true,
+    asNavFor: '.main_card_slider',
+    });
+  }
+
+var slickFinder1 = $('.header_home').length;
+if (slickFinder1 >= 1) {
 
   $('.header_home').slick({
     infinite: true,

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/nouislider.min.css">
     <link rel="stylesheet" href="static/css/style.css?v=3">
     
     <title>Document</title>
@@ -74,11 +75,7 @@
          <nav class="main-nav">
              <ul class="nav-block">
                  <div class="category_nav-block">
-                    <li class="nav_link category_nav_link">
-                        <a href="all_category.html" class="link_category">
-                            Категорії <span class="kostile">></span>
-                        </a>
-                    </li>
+                    <li class="nav_link category_nav_link">Категорії <span class="kostile">></span></li>
 
                     <div class="sub_category">
                         <div class="block_for_nav_category">
@@ -195,13 +192,13 @@
                             </div>
                             <div class="category_nav-prof">
                                <img src="static/img/Combined Shape.svg" alt="">
-                                <a href="prod_list.html" class="category_link">
+                                <a href="#" class="category_link">
                                     Для дівчаток
                                 </a>
                             </div>
                             <div class="category_nav-prof">
                                <img src="static/img/Combined Shape.svg" alt="">
-                                <a href="prod_list_newborn.html" class="category_link">
+                                <a href="#" class="category_link">
                                     Для немовлят
                                 </a>
                             </div>
@@ -210,7 +207,7 @@
                            <h3 class="name_category">
                                Сімейні комплекти
                            </h3>
-                           <a class="last_category-img" href="">
+                           <a class="last_category-img" href="#">
                                <img src="static/img/group-5.jpg" alt="">
                            </a>
                        </div>
@@ -250,89 +247,143 @@
                     </div>
                 </div>
             </div>
-            
+           
          </nav>
         </div>
         <!-- /.container -->
      </div>
-     <header>
-         <div class="header">
-           <div class="container">
-            <div class="header-slick-wrap">
-                <button type="button" class="header-slick-first">
-                    <img src="static/img/arrow-right.svg" alt="">
-                </button>
-                <button type="button" class="header-slick-second">
-                    <img src="static/img/arrow-right.svg" alt="">
-
-                </button>
+    <header class="prod_header">
+        <div class="container">
+            <div class="mini_navigate-block">
+                <a href="#" class="mini_nav_name">
+                    Домашня
+                </a>
+                <span class="slash">
+                    /
+                </span>
+                <a href="#" class="mini_nav_name">
+                    Усі Категорії товарів
+                </a>
+                <span class="slash">
+                    /
+                </span>
+                <a href="#" class="mini_nav_name">
+                    Дитячий одяг 
+                </a>
+                <span class="slash">
+                    /
+                </span>
+                <a href="#" class="mini_nav_name">
+                    Для немовлят
+                </a>
             </div>
-            <div class="header_home">
-               
-                <div class="header_slide-prof">
-                    <a href="#" class="sale_link">
-                        <img src="static/img/header-1.jpg" alt="" class="header_bg-slider">
-                        <div class="sale-content">
-                            <div class="sale-text">
-                                Оновленна колекція жіночих вишиванок
-                            </div>
-                            <a href="#" class="salebtn">
-                                ДЕТАЛІ
-                            </a>
-                        
+          <div class="main-card-wrap">
+                <div class="slider_card-wrap">
+                    <div class="mini_slider">
+                        <div class="img-wrap">
+                            <img src="static/img/best-1.jpg" alt="">
                         </div>
-                        <div class="bg-gradient">
+                        <div class="img-wrap">
+                            <img src="static/img/cd-2.jpg" alt="">
                         </div>
-                    </a>
+                        <div class="img-wrap">
+                            <img src="static/img/cd-3.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="main_card_slider">
+                        <div class="img-wrap">
+                            <img src="static/img/best-1.jpg" alt="">
+                        </div>
+                        <div class="img-wrap">
+                            <img src="static/img/cd-2.jpg" alt="">
+                        </div>
+                        <div class="img-wrap">
+                            <img src="static/img/cd-3.jpg" alt="">
+                        </div>
+                    </div>
                 </div>
-                <div class="header_slide-prof">
-                    <a href="#" class="sale_link">
-                        <img src="static/img/header-2.svg" alt="" class="header_bg-slider">
-                        <div class="sale-content">
-                             <div class="sale-text_original">
-                                 -10% <br>
-                                 НА перше замовлення
-                             </div>
+                <div class="cards_info-wrap">
+                    <div class="cards_name">
+                        <span>Сукня Фіалка</span>
+                        <div class="warn_info">
+                            АКЦІЯ
                         </div>
+                    </div>
+                    <div class="cost_cards-block">
+                        <div class="first_cards_sum">
+                            <s>1022 грн.</s>
+                        </div>
+                        <div class="last_cards_sum">
+                            1022 грн.
+                        </div>
+                    </div>
+                    <div class="filter_category">
+                        Розмір
+                    </div>
+                    <div class="filter_for_size">
+                            <div class="radio_block ANactive">
+                                <input class="input_radio" name="size" type="radio" value="XS" id="rb-10"> 
+                                <label class="label_radio" for="rb-10">XS</label>
+                             </div>
+                             <div class="radio_block">
+                                <input class="input_radio" name="size" type="radio" value="S" id="rb-11" checked> 
+                                <label class="label_radio" for="rb-11">S</label>
+                             </div>
+                             <div class="radio_block">
+                                <input class="input_radio" name="size" type="radio" value="M" id="rb-12"> 
+                                <label class="label_radio" for="rb-12">M</label>
+                             </div>
+                             <div class="radio_block">
+                                <input class="input_radio" name="size" type="radio" value="L" id="rb-13"> 
+                                <label class="label_radio" for="rb-13">L</label>
+                             </div>
+                             <div class="radio_block">
+                                <input class="input_radio" name="size" type="radio" value="XL" id="rb-14"> 
+                                <label class="label_radio" for="rb-14">XL</label>
+                             </div>
+                    </div>
+                    <div class="filter_category">
+                        Колір
+                    </div>
+                    <div class="color_filter-block">
+                        <div class="color_filter-prof">
+                            <input class="input_color" name="color" type="radio" value="1" id="color-1" checked> 
+                            <label class="label_color main_color-1" for="color-1"></label>
+                        </div>
+                        <div class="color_filter-prof">
+                            <input class="input_color" name="color" type="radio" value="2" id="color-2"> 
+                            <label class="label_color main_color-2" for="color-2"></label>
+                        </div>
+                        <div class="color_filter-prof">
+                            <input class="input_color" name="color" type="radio" value="3" id="color-3"> 
+                            <label class="label_color main_color-3" for="color-3"></label>
+                        </div>
+                       
+                    </div>
+                    <a href="#" class="wishes_btn-wrap">
+                        <svg class="svg_hearth" xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18">
+                            <path d="M14.178.007c-1.37.07-2.672.657-3.647 1.655L10 2.205l-.53-.543c-2.167-2.215-5.679-2.215-7.845 0-2.165 2.216-2.165 5.808 0 8.024l7.954 8.135c.233.239.61.239.844 0l7.953-8.135C19.415 8.622 20 7.179 20 5.674c0-1.505-.585-2.948-1.625-4.012C17.335.598 15.925 0 14.453 0l-.275.007zm.275 1.214c1.155 0 2.262.47 3.078 1.305.816.835 1.275 1.967 1.275 3.148 0 1.18-.459 2.313-1.275 3.148l-7.532 7.704-7.53-7.704c-1.7-1.739-1.7-4.558 0-6.296 1.7-1.739 4.455-1.739 6.155 0l.954.975c.233.239.61.239.844 0l.954-.975c.816-.836 1.923-1.305 3.077-1.305z"/>
+                        </svg>
+                         <div class="wishes_text">
+                            Додати в улюблені
+                         </div>                       
                     </a>
+                    <div class="sale_two_btn-wrap">
+                        <div class="basket_btn">
+                            Додати в кошик
+                        </div>
+                        <div class="fast_btn">
+                            Швидка покупка
+                        </div>
+                    </div>
                    
                 </div>
-                <div class="header_slide-prof">
-                    <a href="#" class="sale_link">
-                        <img src="static/img/header-3.jpg" alt="" class="header_bg-slider">
-                        <div class="sale-content">
-                             <div class="sale-text">
-                                 Топ 10 порад як вибрати вишиванку
-                             </div>
-                             <a href="#" class="salebtn">
-                                 ДЕТАЛІ
-                             </a>
-                        </div>
-                        <div class="bg-gradient">
-                         </div>
-                    </a>
-                </div>
-                <div class="header_slide-prof">
-                    <a href="#" class="sale_link">
-                        <img src="static/img/header-2.svg" alt="" class="header_bg-slider">
-                        <div class="sale-content">
-                             <div class="sale-text_original">
-                                 -10% <br>
-                                 НА перше замовлення
-                             </div>
-                        </div>
-                    </a>
-                   
-                </div>
-                
-            </div>
-           </div>
-           <!-- /.container -->
-         </div>
-         <!-- /.header -->
-        
-     </header>
-     <section class="best_sales">
+          </div>
+        </div>
+        <!-- /.container -->
+    </header>
+    <!-- /.prod_header -->
+    <section class="best_sales">
         <div class="container">
            <div class="best_title-block">
                <h4 class="best_sale_title">
@@ -350,7 +401,7 @@
            </div>
             <div class="best-sales-block">
                 <div class="best-sales-prof">
-                    <a href="prod_card.html" class="best-sales_link-img">
+                    <a href="#" class="best-sales_link-img">
                        <img src="static/img/best-1.jpg" alt="" class="best-sales_photo">
                     </a>
                    <div class="best-sales_text">
@@ -444,51 +495,8 @@
         <!-- /.container -->
     </section>
     <!-- /.best_sales -->
-    <section class="preferens">
-      <div class="pref-block">
-        <div class="pref-text">
-            Тільки у  нашому асортименті просто величезний вибір вишиванок
-            для всіх і для кожного!
-        </div>
-        <div class="pref-content">
-            <div class="pref-subtext">
-                Перейдіть у “Категорії товарів” та оберіть вишиванку
-            </div>
-            <a href="#" class="pref-btn">
-                Категорії товарів
-            </a>
-        </div>
-        <div class="pref-bg">
-        </div>
-      </div>
-    </section>
-    <!-- /.preferens -->
-    <section class="contacts">
-        <div class="container">
-            <div class="contacts-block">
-                <div class="mab-block">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2588.576672421335!2d25.589866315698902!3d49.549141379361146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473036b157d14c1d%3A0x237ca2ec8bff1bb0!2z0L_Qu9C-0YnQsCDQk9C10YDQvtGX0LIg0ITQstGA0L7QvNCw0LnQtNCw0L3RgywgMiwg0KLQtdGA0L3QvtC_0ZbQu9GMLCDQotC10YDQvdC-0L_RltC70YzRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgNDYwMDI!5e0!3m2!1suk!2sua!4v1586805375883!5m2!1suk!2sua" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                </div>
-                <div class="contacts-data">
-                    <div class="contacts_title">
-                        Контакти
-                    </div>
-                    <a href="tel:+38(099)9999999" class="contacts_link">+38 (099) 999 99 99</a>
-                    <a href="https://goo.gl/maps/vjrxg6GigowDZ4G3A" class="contacts_link">м. Тернопіль, вул. Героїв Євромайдану 2</a>
-                    <div class="contacts-text">
-                        <p>
-                            Якщо ви вирішили придбати українську вишиванку недорого, але натрапили на труднощі при виборі, звертайтесь до наших консультантів. Ми зобов’язані допомогти Вам при виборі вишиванки.
-                        </p>
-                        <p>
-                            Українські вишиванки — багатовікове мистецтво, в якому сьогодні поєднується все дивовижне, що лише удається зберегти і примножити майстрам з різних куточків України. Інтернет-магазин Файна Вишиванка допоможе Вам легко купити недорогу вишиванку в Тернополі або у будь-якому куточку країни, будь то Київ, Львів, Харків, Одеса, швидка доставка та якісні товари це особливості нашого магазину.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /.container -->
-    </section>
-    <!-- /.contacts -->
+
+
     <footer class="footer">
         <img src="static/img/footer-line.svg" alt="" class="footer_line">
         <div class="container">
@@ -542,7 +550,7 @@
                     <a href="#" class="footer_link">
                         Блог
                     </a>
-                    <a href="order.html" class="footer_link">
+                    <a href="#" class="footer_link">
                         Доставка і оплата
                     </a>
                     
@@ -599,10 +607,11 @@
 
 
 <script type="text/javascript" src="static/js/jQuery.js"></script>
-<script type="text/javascript" src="static/js/slick.min.js"></script>
+<script type="text/javascript" src="static/js/nouislider.min.js"></script>
 <script type="text/javascript" src="static/js/jquery.validate.min.js"></script>
 <script type="text/javascript" src="static/js/ajax_form.js"></script>
-<script type="text/javascript" src="static/js/main.js?v=2"></script>
+<script type="text/javascript" src="static/js/slick.min.js"></script>
+<script type="text/javascript" src="static/js/main.js?v=3"></script>
 
 </body>
 </html>

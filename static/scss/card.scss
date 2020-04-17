@@ -1,0 +1,312 @@
+.card {
+
+}
+.mini_slider {
+    width: 200px;
+
+
+    .img-wrap {
+        width: 140px;
+        height: 140px;
+        margin-bottom: 20px;
+    }
+}
+.slider_card-wrap {
+    display: flex;
+}
+.main_card_slider {
+    width: 400px;
+    height: 100%;
+        .img-wrap {
+            height: 530px;
+        }
+}
+.img-wrap {
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.main-card-wrap {
+    display: flex;
+}
+.cards_name {
+    font-size: 36px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #1e1b15;
+    display: flex;
+    align-items: center;
+}
+.warn_info {
+    text-transform: uppercase;
+    width: 67px;
+    height: 29px;
+    border-radius: 14.5px;
+    background-color: #ed5715;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 3px;
+    margin-left: 30px;
+    margin-top: 6px;
+}
+.cost_cards-block {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+.first_cards_sum {
+    opacity: 0.5;
+    font-size: 28px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #1e1b15;
+}
+.last_cards_sum {
+    font-size: 28px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #1e1b15;
+    margin-left: 15px;
+}
+.cards_info-wrap {
+    margin-left: 10px;
+    .filter_for_size {
+        .label_radio {
+            width: 45px;
+            text-align: center;
+        }
+
+    }
+
+    .input_radio:not(:checked)+.label_radio:after, .input_radio:not(:checked)+.label_radio:after {
+
+    }
+    
+    .input_radio:checked+.label_radio:after, .input_radio:not(:checked)+.label_radio:after {
+       border: none;
+        border-bottom: 1.5px solid red;
+        left: 9px;
+        top: 100%;
+        width: 26px;
+        transform: rotate(0deg);
+        transition: all .2s;
+    }
+    .input_radio:checked+.label_radio:before, .input_radio:not(:checked)+.label_radio:before {
+        display: none; 
+    }
+    .input_radio:checked+.label_radio, .input_radio:not(:checked)+.label_radio {
+        padding-left: 0;
+    }
+}
+.radio_block.ANactive {
+    width: 20px;
+    text-align: center;
+    .label_radio {
+        opacity: 0.5;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.5px;
+        color: #1e1b15;
+        position: relative;
+        &:before {
+            position: absolute;
+            left: -2px;
+            top: 11px;
+            content: '';
+            width: 130%;
+            opacity: 1;
+            height: 1px;
+            background-color: #1e1b15;
+        }
+    }
+}
+.svg_hearth {
+    transition: all .2s;
+    margin-right: 5px;
+}
+.wishes_btn-wrap {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-top: 20px;
+
+    &:hover {
+        .wishes_text {
+            color: #da251d;
+        }
+        .svg_hearth {
+            fill: #da251d;
+        }
+    }
+}
+.wishes_text {
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    transition: all .2s;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    color: #1e1b15;
+}
+.sale_two_btn-wrap {
+    display: flex;
+    align-items: center;
+    margin-top: 45px;
+}
+.basket_btn {
+    cursor: pointer;
+    text-align: center;
+    width: 201px;
+    border: solid 1px #242321;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: 2px;
+    text-align: center;
+    padding: 18.5px 0;
+    color: #242321;
+}
+.fast_btn {
+    margin-left: 50px;
+        cursor: pointer;
+    text-align: center;
+    width: 206px;
+    background-color: #da251d;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: 2px;
+    padding: 18.5px 0;
+    text-align: center;
+    color: #ffffff;
+    border: solid 1px #da251d;
+
+}
+@media (max-width: 1260px) {
+    .sale_two_btn-wrap {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .fast_btn {
+        margin-left: 0;
+        margin-top: 25px;
+    }
+    .cards_name {
+        font-size: 29px;
+    }
+    .last_cards_sum, .first_cards_sum {
+        font-size: 24px;
+    }
+}
+@media (max-width: 992px) {
+    .main-card-wrap {
+        flex-direction: column;
+    }
+    .slider_card-wrap {
+        justify-content: start;
+    }
+    .cards_name {
+        font-size: 40px;
+    }
+    .last_cards_sum, .first_cards_sum {
+        font-size: 29px;
+    }
+    .cards_info-wrap {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    
+    .sale_two_btn-wrap {
+        align-items: center;
+        flex-direction: unset;
+    }
+    .fast_btn {
+        margin-left: 30px;
+        margin-top: 0;
+    }
+}
+@media (max-width: 653px) {
+    .mini_slider .img-wrap {
+        width: 70px !important;
+        height: 70px;
+    }
+    .mini_slider {
+        width: 100px;
+    }
+}
+@media (max-width: 553px) {
+    .mini_slider .img-wrap {
+        width: 70px !important;
+        height: 70px;
+    }
+    .mini_slider {
+        width: 100px;
+    }
+    .sale_two_btn-wrap {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .fast_btn {
+        margin-left: 0;
+        margin-top: 25px;
+    }
+    .basket_btn, .fast_btn {
+        width: 100%;
+        
+    }
+    .slider_card-wrap {
+        .slick-initialized .slick-slide {
+            margin: 0;
+        }
+    }
+    .mini_slider {
+        width: 80px;
+    }
+    .mini_slider .img-wrap {
+        margin-bottom: 3px;
+    }
+    
+    .main_card_slider {
+        width: 70%;
+        height: auto;
+    }
+    .main_card_slider .img-wrap {
+        height: auto;
+
+        img {
+            height: auto;
+        }
+    }
+    
+   
+}
+@media (max-width: 370px) {
+    .cards_name {
+        font-size: 36px;
+    }
+}
