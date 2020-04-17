@@ -59,16 +59,7 @@
 .all_category-wrap {
     padding-bottom: 50px;
 }
-.link_category {
-    text-decoration: none;
-    color: #1e1b15;
-    display: flex;
 
-    &:hover {
-        color: #da251d;
-        
-    }
-}
 
 @media(max-width: 572px) {
     .sub_category_name {

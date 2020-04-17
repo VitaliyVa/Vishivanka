@@ -83,6 +83,16 @@
     }
 
 }
+.link_category {
+    text-decoration: none;
+    color: #1e1b15;
+    display: flex;
+
+    &:hover {
+        color: #da251d;
+        
+    }
+}
 .nav-logo-block {
     display: block;
 }
