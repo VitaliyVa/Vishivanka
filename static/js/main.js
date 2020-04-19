@@ -211,8 +211,6 @@ $('.cost_filter_num').text(val_floor1 + " - " + val_floor2);
 
 
 
-
-
   function get_card_generate() {
     currentPage++;
     var fData = new FormData();
@@ -299,9 +297,160 @@ function createProdCard (product, step) {
 };
 
 
+var wish_finder = $('.wish_content-wrap').length;
+  if (wish_finder >= 1) {
+    $('.wish_content-wrap')[0].appendChild(createWishCard());
+    $('.wish_content-wrap')[0].appendChild(createWishCard());
+  }
 
 
 
+function createWishCard (product, step) {
+  
+  let basket_card = document.createElement('div');
+  basket_card.classList.add('basket_card');
+
+  var basket_left = document.createElement('div');
+  basket_left.classList.add('basket_left-content');
+
+  var basket_img_wrap = document.createElement('div');
+  basket_img_wrap.classList.add('basket-img');
+
+  var basket_img = document.createElement('img');
+  basket_img.setAttribute('src', 'static/img/basket-1.jpg');
+
+  var basket_name = document.createElement('div');
+  basket_name.classList.add('basket-name', 'basket_name-content');
+  basket_name.textContent = 'Сукня Фіалка';
+
+  var basket_size = document.createElement('div');
+  basket_size.classList.add('basket-size', 'basket_name-content');
+  basket_size.textContent = 'S';
+
+  var basket_color = document.createElement('div');
+  basket_color.classList.add('basket-color', 'basket_name-content');
+  basket_color.setAttribute('style', 'background-color:' + '#929db2' + ';');
+
+  var basket_cost = document.createElement('div');
+  basket_cost.classList.add('basket-cost', 'basket_name-content');
+  basket_cost.textContent = '₴ 1223';
+
+  var basket_right = document.createElement('div');
+  basket_right.classList.add('basket_right-content');
+
+  var basket_btn = document.createElement('div');
+  basket_btn.classList.add('basket_btn');
+  basket_btn.textContent = 'Додати в кошик';
+
+  var del_block = document.createElement('div');
+  del_block.classList.add('del_block');
+
+  var del_img = document.createElement('img');
+  del_img.setAttribute('src', 'static/img/trash.svg');
+
+  var del_btn = document.createElement('div');
+  del_btn.classList.add('del_btn');
+  del_btn.textContent = 'Видалити';
+
+  basket_card.appendChild(basket_left);
+  basket_card.appendChild(basket_right);
+  basket_left.appendChild(basket_img_wrap);
+  basket_img_wrap.appendChild(basket_img);
+  basket_left.appendChild(basket_name);
+  basket_left.appendChild(basket_size);
+  basket_left.appendChild(basket_color);
+  basket_left.appendChild(basket_cost);
+  basket_right.appendChild(basket_btn);
+  basket_right.appendChild(del_block);
+  del_block.appendChild(del_img);
+  del_block.appendChild(del_btn);
+  
+  
+
+  
+       return basket_card;
+       
+};
+
+
+var basket_finder = $('.basket_content-wrap').length;
+  if (basket_finder >= 1) {
+    $('.basket_content-wrap')[0].appendChild(createWishCard());
+    $('.basket_content-wrap')[0].appendChild(createWishCard());
+  }
+
+
+function createWishCard (product, step) {
+  
+  let basket_card = document.createElement('div');
+  basket_card.classList.add('basket_card');
+
+  var basket_left = document.createElement('div');
+  basket_left.classList.add('basket_left-content');
+
+  var basket_img_wrap = document.createElement('div');
+  basket_img_wrap.classList.add('basket-img');
+
+  var basket_img = document.createElement('img');
+  basket_img.setAttribute('src', 'static/img/basket-1.jpg');
+
+  var basket_name = document.createElement('div');
+  basket_name.classList.add('basket-name', 'basket_name-content');
+  basket_name.textContent = 'Сукня Фіалка';
+
+  var basket_size = document.createElement('div');
+  basket_size.classList.add('basket-size', 'basket_name-content');
+  basket_size.textContent = 'S';
+
+  var basket_color = document.createElement('div');
+  basket_color.classList.add('basket-color', 'basket_name-content');
+  basket_color.setAttribute('style', 'background-color:' + '#929db2' + ';');
+
+  var basket_cost = document.createElement('div');
+  basket_cost.classList.add('basket-cost', 'basket_name-content');
+  basket_cost.textContent = '₴ 1223';
+
+  var basket_right = document.createElement('div');
+  basket_right.classList.add('basket_right-content');
+
+  
+
+  var del_block = document.createElement('div');
+  del_block.classList.add('del_block');
+
+  var del_img = document.createElement('img');
+  del_img.setAttribute('src', 'static/img/trash.svg');
+
+  var del_btn = document.createElement('div');
+  del_btn.classList.add('del_btn');
+  del_btn.textContent = 'Видалити';
+
+  basket_card.appendChild(basket_left);
+  basket_card.appendChild(basket_right);
+  basket_left.appendChild(basket_img_wrap);
+  basket_img_wrap.appendChild(basket_img);
+  basket_left.appendChild(basket_name);
+  basket_left.appendChild(basket_size);
+  basket_left.appendChild(basket_color);
+  basket_left.appendChild(basket_cost);
+  basket_right.appendChild(del_block);
+  del_block.appendChild(del_img);
+  del_block.appendChild(del_btn);
+  
+  
+
+  
+       return basket_card;
+       
+};
+
+
+
+$('.del_block').on('click', function() {
+  console.log(1);
+ $(this).parents(".basket_right-content").parents('.basket_card').remove() //удаляем элемент
+
+});
 
 
 
@@ -317,6 +466,65 @@ function createProdCard (product, step) {
     
 });
 
+
+var order_finder = $('.order_content_card-wrap').length;
+  if (order_finder >= 1) {
+    $('.order_content_card-wrap')[0].appendChild(createOrderCard());
+  }
+
+
+
+function createOrderCard (product, step) {
+  let card_order_prof = document.createElement('div');
+  card_order_prof.classList.add('card_info-prof');
+
+  var order_img = document.createElement('img');
+  order_img.setAttribute('src', 'static/img/card-2.jpg');
+
+  var char_wrap = document.createElement('div');
+  char_wrap.classList.add('char_data');
+
+  var char_top = document.createElement('div');
+  char_top.classList.add('char_top');
+
+  var char_name = document.createElement('span');
+  char_name.classList.add('char_web', 'char_name');
+  char_name.textContent = 'Сукня Фіалка' + ", ";
+
+  var char_2 = document.createElement('span');
+  char_2.classList.add('char_web', 'char_2');
+  char_2.textContent = 'Синій колір' + ", ";
+
+  var char_3 = document.createElement('span');
+  char_3.classList.add('char_web', 'char_3');
+  char_3.textContent = 'S';
+
+  var char_cost = document.createElement('span');
+  char_cost.classList.add('char_web', 'char_one_cost');
+  char_cost.textContent = '₴ 1223';
+
+  card_order_prof.appendChild(order_img);
+  card_order_prof.appendChild(char_wrap);
+  char_wrap.appendChild(char_top);
+  char_top.appendChild(char_name);
+  char_top.appendChild(char_2);
+  char_top.appendChild(char_3);
+  char_wrap.appendChild(char_cost);
+  
+  
+
+  
+       return card_order_prof;
+};
+
+
+
+// function easy_create(name, tag, clases, attr, attr_content, content) {
+//   var name = document.createElement(tag);
+//   name.classList.add(clases);
+//   name.setAttribute(attr, attr_content);
+//   name.textContent = content;
+// }
 
 
 var orderInputHasFocus = $('.order_validate');

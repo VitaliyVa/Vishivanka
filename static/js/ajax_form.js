@@ -13,6 +13,7 @@ $(function() {
 function Onload() {
     valide_form('#form_cons', '.inp-vak-wrap', true);
     valide_form('.order_form', '.input-field', true);
+    valide_form('.reg_form', '.inp-vak-wrap', true);
 }
 function location_leng() {
     return location.pathname.split('/')[1];
@@ -59,6 +60,18 @@ function valide_form(id_form, error_inp_wrap, check_request) {
               name: {
                 required: true,
               },
+              mobile: {
+                required: true,
+              },
+              city: {
+                required: true,
+              },
+              password: {
+                required: true,
+              },
+              re_password: {
+                required: true,
+              },
               order_name: {
                 required: true,
               },
@@ -88,6 +101,18 @@ function valide_form(id_form, error_inp_wrap, check_request) {
                     email: error_text.email
                     },
                 name: {
+                required: error_text.required,
+                },
+                mobile: {
+                required: error_text.required,
+                },
+                city: {
+                required: error_text.required,
+                },
+                password: {
+                required: error_text.required,
+                },
+                re_password: {
                 required: error_text.required,
                 },
                 order_name: {
@@ -123,8 +148,24 @@ function valide_form(id_form, error_inp_wrap, check_request) {
                 $(form_input).each(function(index, obj) {
                     form_json[obj.name] = obj.value;
                 });
-               
-                if(url_form != '') {
+                var pass_checked = true;
+                var pass_finder = $('.pass_2').length; 
+
+                if (pass_finder == 1) {
+                    var pass_1 = $('.pass_1').val();
+                    var pass_2 = $('.pass_2').val();
+                        pass_checked = false;
+                    if (pass_1 == pass_2) {
+                        $('.pass_checked_error').text('');
+                        pass_checked = true;
+                    } else {
+                        $('.pass_checked_error').text('паролі не співпадають');
+                    }
+                    
+                }
+                console.log('pass_finder: ', pass_finder);
+
+                if(url_form != '' && pass_checked == true) {
 
 
                     console.log(url_form);

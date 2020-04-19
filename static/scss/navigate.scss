@@ -127,6 +127,26 @@
 
 .block_for_nav_category {
 }
+.nav_link {
+    a {
+        text-decoration: none;
+        transition: all .2s;
+        font-size: 18px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #1e1b15;
+    }
+
+    &:hover {
+        .nav_fix_link {
+        color: #da251d;
+
+        }
+    }
+}
 
 
 .kostile {
