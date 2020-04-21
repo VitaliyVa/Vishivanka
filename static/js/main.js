@@ -122,6 +122,20 @@ orderInputHasFocus.on('blur', function() {
     var content_tab = $("#tab_" + className);
     content_tab.addClass("order_tab_content_active");
   });
+
+
+  $(".cabinet_link").on("click", function(){
+    // ($(this)[0].dataset.tab);
+    var className = $(this).data('tab');
+    console.log('className: ', className);
+
+    ($(".cabinet_link").removeClass("cabinet_link_active"));
+     ($(this).addClass("cabinet_link_active"));
+    ($(".cabinet_content-block").removeClass("cabinet_content-block_active"));
+    
+    var content_tab = $("#tab_" + className);
+    content_tab.addClass("cabinet_content-block_active");
+  });
    
 
 $('.order_label_check-1').on('click', function() {
@@ -300,7 +314,6 @@ function createProdCard (product, step) {
 var wish_finder = $('.wish_content-wrap').length;
   if (wish_finder >= 1) {
     $('.wish_content-wrap')[0].appendChild(createWishCard());
-    $('.wish_content-wrap')[0].appendChild(createWishCard());
   }
 
 
@@ -312,6 +325,9 @@ function createWishCard (product, step) {
 
   var basket_left = document.createElement('div');
   basket_left.classList.add('basket_left-content');
+
+  var basket_right = document.createElement('div');
+  basket_right.classList.add('basket_right-content');
 
   var basket_img_wrap = document.createElement('div');
   basket_img_wrap.classList.add('basket-img');
@@ -334,9 +350,6 @@ function createWishCard (product, step) {
   var basket_cost = document.createElement('div');
   basket_cost.classList.add('basket-cost', 'basket_name-content');
   basket_cost.textContent = '₴ 1223';
-
-  var basket_right = document.createElement('div');
-  basket_right.classList.add('basket_right-content');
 
   var basket_btn = document.createElement('div');
   basket_btn.classList.add('basket_btn');
@@ -375,12 +388,12 @@ function createWishCard (product, step) {
 
 var basket_finder = $('.basket_content-wrap').length;
   if (basket_finder >= 1) {
-    $('.basket_content-wrap')[0].appendChild(createWishCard());
-    $('.basket_content-wrap')[0].appendChild(createWishCard());
+    $('.basket_content-wrap')[0].appendChild(createBasketCard());
+    $('.basket_content-wrap')[0].appendChild(createBasketCard());
   }
 
 
-function createWishCard (product, step) {
+function createBasketCard (product, step) {
   
   let basket_card = document.createElement('div');
   basket_card.classList.add('basket_card');
