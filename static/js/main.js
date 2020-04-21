@@ -479,7 +479,7 @@ $('.del_block').on('click', function() {
       }
 
 });
-    let finder_prod_card = $('..basket_card').length;
+    let finder_prod_card = $('.basket_card').length;
 
     if (finder_prod_card == 0) {
       $('.basket_info-block_none').addClass('basket_info-block_none_active');
