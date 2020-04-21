@@ -339,6 +339,31 @@
 .display_only_mob {
     display: none;
 }
+.basket-prof {
+    position: relative;
+}
+.sales_counter {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #da251d;
+    font-size: 10px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+}
+.svg-basket {
+    
+}
+
 @media (max-width: 992px) {
     .ham {
         display: block;

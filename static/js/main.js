@@ -6,6 +6,11 @@ $(document).ready(function(){
 
 
 
+
+
+
+
+
   console.log();
 
   var anActive_inp = $('.radio_block.ANactive').find('.input_radio');
@@ -459,11 +464,30 @@ function createBasketCard (product, step) {
 
 
 
+
+
 $('.del_block').on('click', function() {
-  console.log(1);
  $(this).parents(".basket_right-content").parents('.basket_card').remove() //удаляем элемент
 
+ let finder_prod_card = $('.basket_card').length;
+
+    if (finder_prod_card == 0) {
+
+        $('.basket_info-block_none').addClass('basket_info-block_none_active');
+        $('.basket_none').addClass('basket_none_active');
+
+      }
+
 });
+    let finder_prod_card = $('..basket_card').length;
+
+    if (finder_prod_card == 0) {
+      $('.basket_info-block_none').addClass('basket_info-block_none_active');
+      $('.basket_none').addClass('basket_none_active');
+    }
+
+
+
 
 
 
@@ -714,6 +738,10 @@ $('.ham').on('click', function() {
 
     $('.main-nav').toggleClass('main-nav_active');
 });
+
+
+
+
 
 
 // ========================================================>

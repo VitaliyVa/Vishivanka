@@ -152,7 +152,24 @@
     background: transparent;
 }
 
-
+.basket_none {
+    display: none;
+}
+.basket_none_active {
+    display: block;
+    text-align: center;
+    font-size: 28px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #1e1b15;
+    margin: 50px 0;
+}
+.basket_info-block_none_active {
+    display: none;
+}
 @media (max-width: 1248px) {
     .basket_card {
         flex-direction: column;

@@ -13,13 +13,31 @@
 }
 .slider_card-wrap {
     display: flex;
+    position: relative;
 }
 .main_card_slider {
     width: 400px;
+    position: relative;
     height: 100%;
         .img-wrap {
             height: 530px;
         }
+
+
+        .slick-list {
+            overflow: unset;
+        }
+}
+.discount_prod {
+    width: 110px;
+    height: auto;
+    position: absolute;
+    top: -18px;
+    left: -18px;
+    z-index: 99;
+}
+.container_overlow {
+    overflow: hidden;
 }
 .img-wrap {
     img {
@@ -258,6 +276,10 @@
     .mini_slider {
         width: 100px;
     }
+    .discount_prod {
+        left: unset;
+        right: -18px;
+    }
 }
 @media (max-width: 553px) {
     .mini_slider .img-wrap {
@@ -308,5 +330,12 @@
 @media (max-width: 370px) {
     .cards_name {
         font-size: 36px;
+    }
+    .discount_prod {
+        left: unset;
+        right: -8px;
+        top: -8px;
+        width: 80px;
+        
     }
 }
