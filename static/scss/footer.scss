@@ -187,7 +187,7 @@
         background-color: transparent;
         font-size: 14px !important;
        
-        color: #1e1b15 !important;
+        color: #242321 !important;
     }
     .inp-vak-wrap {
         position: relative;
@@ -215,7 +215,7 @@
       border: none;
       background-color: transparent;
       border-bottom: 1px solid #242321 !important;
-      color: #00000096 !important;
+      
     }
     .input_focus_active {
         border-bottom: 2px solid #242321 !important;
@@ -224,7 +224,7 @@
     
     .inp-cons-wrap {
       input {
-        color: #00000096 !important;
+        
         border-bottom: 1px solid #242321;
       }
     }
@@ -269,6 +269,9 @@
 .error {
     color: #da251d;
     font-size: 13px;
+}
+.input_area_focus {
+    padding-top: 15px;
 }
 @media (max-width: 1010px) {
     .footer_line {

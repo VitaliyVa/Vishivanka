@@ -10,6 +10,17 @@
         height: 140px;
         margin-bottom: 20px;
     }
+
+
+
+
+    .slick-slide {
+        opacity: 0.5;
+        transition: all .2s;
+    }
+    .slick-current {
+        opacity: 1;
+    }
 }
 .slider_card-wrap {
     display: flex;

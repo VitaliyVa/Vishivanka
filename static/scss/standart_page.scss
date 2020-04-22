@@ -149,8 +149,9 @@
 
     img {
         position: absolute;
-        z-index: 0;
+        z-index: 2;
         top: 0;
+        cursor: pointer;
     }
 }
 .src_error_input {

@@ -11,6 +11,24 @@ $(document).ready(function(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
   console.log();
 
   var anActive_inp = $('.radio_block.ANactive').find('.input_radio');
@@ -617,9 +635,54 @@ inputHasFocus.on('blur', function() {
   });
 
   $('.search-svg').on('click', function() {
-    search_inp.focus();
 
   })
+
+
+  if ($('.search_input_class').val() != '') {
+    let focusFinder_search = $('.label_search');
+    let focusFinder_searchInp = $('.search_input_class');
+    focusFinder_search.addClass('label_search_active');
+    focusFinder_searchInp.addClass('nav_search_active');
+    
+  } 
+  $('.search_class').on('click', function() {
+    if ($('.search_input_class').val() === '') {
+      let blurFinder_search = $('.label_search');
+      let blurFinder_searchInp = $('.search_input_class');
+          blurFinder_search.removeClass('label_search_active');
+          blurFinder_searchInp.removeClass('nav_search_active');
+    } else {
+      var querySearch = $('.search_input_class').val();
+     
+      sessionStorage.setItem('search__site', querySearch);
+
+
+
+
+      location.href = "file:///Users/air/Documents/GIT/VyshyVanka/search_result.html";
+    }
+  });
+ 
+  $('.search_input_class').on('keydown', function(e) {
+    if ($(this).val() !== '' && e.keyCode === 13) {
+      e.preventDefault();
+      sessionStorage.setItem('search__site', $(this).val());
+    
+      location.href = "file:///Users/air/Documents/GIT/VyshyVanka/search_result.html";
+    }
+  });
+  let search_content = sessionStorage.getItem("search__site");
+  $('.user_error_text').text(search_content);
+
+
+
+
+
+
+
+
+
 
 
   var slickFinder0 = $('.slider_card-wrap').length;
